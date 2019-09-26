@@ -9,16 +9,16 @@ _DEPS = velha.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 _Velha = velha.o main.o 
-OBJ1 = $(patsubst %,$(ODIR)/%,$(_Pilha))
+OBJ1 = $(patsubst %,$(ODIR)/%,$(_Velha))
 
-_Testa_Velha = pilha.o testa_velha.o 
-OBJ2 = $(patsubst %,$(ODIR)/%,$(_Testa_Pilha))
+_Testa_Velha = velha.o testa_velha.o 
+OBJ2 = $(patsubst %,$(ODIR)/%,$(_Testa_Velha))
 
 
 $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-Vleha: $(OBJ1)
+Velha: $(OBJ1)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 Testa_Velha: $(OBJ2)
