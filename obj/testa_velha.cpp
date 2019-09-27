@@ -3,5 +3,16 @@
 #include "../include/velha.hpp"
 
 TEST_CASE("Verifica Jogo Indefinido"){
-    REQUIRE(checkGame()==-1);
+    WHEN("O jogo ainda não foi iniciado"){
+        THEN("checkGame() deve retornar -1"){
+            REQUIRE( checkGame() == -1);
+        }
+    }
+    WHEN("Não existe um Empate ou Vencedor, mas o Jogo foi iniciado"){
+        THEN("checkGame() deve retornar -1"){
+            insereX(1,1);
+            insereO(2,2);
+            REQUIRE( checkGame() == -1);
+        }
+    }
 }
