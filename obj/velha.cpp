@@ -128,5 +128,10 @@ void insereO(int L, int C) {
     }
 }
 int verifNumColLin(int L, int C) {
-    return -2;
+    if (L < 1 || L > 3 || C < 1 || C > 3) {
+        printf("\n\nERROR: Posicao inválida\n\n");
+        return 0;
+    } else {
+        return 1;
+        }
 }

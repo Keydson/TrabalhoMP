@@ -6,7 +6,7 @@ CFLAGS=-I$(IDIR)
 ODIR=../obj
 #LDIR =../lib
 
-_DEPS = velha.h
+_DEPS = velha.h catch.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 _Velha = velha.o main.o 
@@ -29,4 +29,4 @@ Testa_Velha: $(OBJ2)
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ 
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 

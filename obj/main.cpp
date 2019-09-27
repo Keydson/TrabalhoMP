@@ -16,11 +16,17 @@ int main() {
             case 1:
                 printf("\nDigite a Linha e a Coluna (C,L): ");
                 scanf("%d,%d", &C, &L);
+                if (verifNumColLin(L, C) == 0) {
+                    break;
+                }
                 insereX(L, C);
                 break;
             case 2:
                 printf("\nDigite a Linha e a Coluna (C,L): ");
                 scanf("%d,%d", &C, &L);
+                if (verifNumColLin(L, C) == 0) {
+                    break;
+                }
                 insereO(L, C);
                 break;
             case 0:
