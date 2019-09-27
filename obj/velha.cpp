@@ -6,7 +6,7 @@
 int velha[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 int contX = 0;
 int contO = 0;
-void showGame() {
+void showGame() {  // Função para mostrar o progresso da partida
     int i, j;
     int colum = 1;
     printf("  C 1 2 3\n"
@@ -20,7 +20,7 @@ void showGame() {
         printf("\n");
     }
 }
-bool checkGameVoid() {
+bool checkGameVoid() {  // Verifica se a partida foi iniciada ou não
     int i, j;
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
@@ -31,6 +31,8 @@ bool checkGameVoid() {
     }
     return true;
 }
+    // Verifica o progresso da partida,
+    // para saber se alguém venceu, se houve empate ou se tem um jogo impossível
 int checkGame() {
     if (checkGameVoid() == true) {
        return -1;
@@ -99,7 +101,7 @@ int checkGame() {
     }
     return -1;
 }
-void reiniciarJogo() {
+void reiniciarJogo() {  // Zera a matriz para que uma nova partida seja iniciada
     int i, j;
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
@@ -109,7 +111,7 @@ void reiniciarJogo() {
     contX = 0;
     contO = 0;
 }
-void insereX(int L, int C) {
+void insereX(int L, int C) {  // Insere X na posição desejada(se disponível)
     if (velha[L-1][C-1] != 0) {  // Garante que X ou O seja sobrescrito
         printf("\n\nERROR: Esta posicao ja foi preenchida\n\n");
         checkGame();
@@ -118,7 +120,7 @@ void insereX(int L, int C) {
         contX++;
     }
 }
-void insereO(int L, int C) {
+void insereO(int L, int C) {  // Insere O na posição desejada(se disponível)
     if (velha[L-1][C-1] != 0) {  // Garante que X ou O seja sobrescrito
         printf("\n\nERROR: Esta posicao ja foi preenchida\n\n");
         checkGame();
@@ -127,6 +129,8 @@ void insereO(int L, int C) {
         contO++;
     }
 }
+// Verifica o índice informado pelo usuário,
+// para evitar tamanhos negativos, nullos ou maiores que a matrix
 int verifNumColLin(int L, int C) {
     if (L < 1 || L > 3 || C < 1 || C > 3) {
         printf("\n\nERROR: Posicao inválida\n\n");

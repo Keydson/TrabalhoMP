@@ -1,0 +1,12 @@
+Keydson Estrela da Silva 18/0021320
+Métodos de Programação
+
+INTRUÇÕES PARA A COMPILAÇÃO E EXECUÇÃO DO PROGRAMA
+
+Para compilar o programa, entre pelo terminal no diretório "../TrabalhoMP/src", onde está contido o arquivo makefile;
+
+Para compilar o programa, utilize no terminal "$make Velha", e depois "$./Velha" para executá-lo;
+
+Para compilar o arquivo de teste, utilize no terminal "$make Testa_Velha", para executá-lo, utilize "$./Testa_Velha";
+
+Para excluir os arquivos ".o", utilize no terminal "$make clean".
