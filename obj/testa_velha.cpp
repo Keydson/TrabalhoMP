@@ -53,6 +53,14 @@ TEST_CASE(){
             REQUIRE(checkGame() == 2);
             reiniciarJogo();
         }
+        THEN("Jogo indefinido, deve retornar -2") {
+            insereX(1,3);
+            insereO(1,1);
+            insereX(1,2);
+            insereX(3,1);
+            REQUIRE(checkGame() == -2);
+            reiniciarJogo();
+        }
     }
 }
 TEST_CASE("Número da linha e/ou coluna") {
