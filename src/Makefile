@@ -1,3 +1,4 @@
+#Copyright 2019 Keydson Estrela
 IDIR =../include
 CC=g++
 CFLAGS=-I$(IDIR)
